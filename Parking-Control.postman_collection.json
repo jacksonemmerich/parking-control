@@ -1,0 +1,135 @@
+{
+	"info": {
+		"_postman_id": "feab3272-203e-4836-9f00-6b65daad29ea",
+		"name": "Parking-Control",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "650480"
+	},
+	"item": [
+		{
+			"name": "all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/parking-spot",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"parking-spot"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "one",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/parking-spot/9aaedaee-3bf8-470c-af4c-d5e3fa3986e8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"parking-spot",
+						"9aaedaee-3bf8-470c-af4c-d5e3fa3986e8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "insert",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"parkingSpotNumber\": \"117A\",\n    \"licensePlateCar\": \"ndk1602\",\n    \"brandCar\": \"BMW\",\n    \"modelCar\": \"x1\",\n    \"colorCar\": \"branca\",\n    \"responsibleName\": \"pedro souza\",\n    \"apartment\": \"117\",\n    \"block\": \"A\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/parking-spot",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"parking-spot"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"parkingSpotNumber\": \"116A\",\n    \"licensePlateCar\": \"ndk1601\",\n    \"brandCar\": \"BMW\",\n    \"modelCar\": \"x1\",\n    \"colorCar\": \"branca\",\n    \"responsibleName\": \"pedro souza\",\n    \"apartment\": \"116\",\n    \"block\": \"A\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/parking-spot/9aaedaee-3bf8-470c-af4c-d5e3fa3986e8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"parking-spot",
+						"9aaedaee-3bf8-470c-af4c-d5e3fa3986e8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"parkingSpotNumber\": \"116A\",\n    \"licensePlateCar\": \"ndk1601\",\n    \"brandCar\": \"BMW\",\n    \"modelCar\": \"x1\",\n    \"colorCar\": \"branca\",\n    \"responsibleName\": \"pedro souza\",\n    \"apartment\": \"116\",\n    \"block\": \"A\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/parking-spot/9aaedaee-3bf8-470c-af4c-d5e3fa3986e8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"parking-spot",
+						"9aaedaee-3bf8-470c-af4c-d5e3fa3986e8"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

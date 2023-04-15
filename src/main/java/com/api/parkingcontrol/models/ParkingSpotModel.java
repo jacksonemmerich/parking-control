@@ -7,6 +7,7 @@ import java.io.Serializable;
 import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.OffsetDateTime;
+import java.time.ZoneOffset;
 import java.util.UUID;
 
 @Entity
@@ -29,7 +30,7 @@ public class ParkingSpotModel implements Serializable {
     private String colorCar;
 
     @Column(nullable = false, columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
-    private OffsetDateTime registrationDate;
+    private OffsetDateTime registrationDate = Instant.now().atOffset(ZoneOffset.UTC);
     @Column(nullable = false, length = 130)
     private String responsibleName;
     @Column(nullable = false, length = 30)
